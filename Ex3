@@ -1,0 +1,41 @@
+import sys,os
+import math
+import cmath
+os.system('CLS')
+print ("hello")
+
+print ("now we will find roots of a quadratic equation of form ax2+bx+c=0")
+a=float(input("a="))
+b=float(input("b="))
+c=float(input("c="))
+quadcoeff=[a,b,c]
+print quadcoeff
+
+def funquad(quadcoeff):
+    c7=quadcoeff[0]
+    print c7
+    c8=quadcoeff[1]
+    print c8
+    c9= quadcoeff[2]
+    print c9
+    a1=c8*c8
+    a2=4*c7*c9
+    c10=[1+2j,2+3j]
+    print c10
+    if (a1<a2):
+        a3=math.sqrt(a2-a1)
+        c10[0]=complex(-c8/(2*c7),a3/(2*c7))
+        c10[1]=complex(-c8/(2*c7),-a3/(2*c7))
+    else:       
+        a3=math.sqrt(a1-a2)
+        c10[0]=(-c8+a3)/(2*c7)
+        c10[1]=(-c8-a3)/(2*c7)
+    print a3/(2*c7)
+
+    print c10
+    return c10
+
+#to find roots of a quadratic equation of form ax2+bx+c=0
+
+c_quadroots=funquad(quadcoeff)
+print c_quadroots
